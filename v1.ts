@@ -1113,7 +1113,7 @@ namespace cutebotProV1 {
     /**
      * get IR value
      */
-    export function irButton(Button: CutbotProCutbotProIRButtons): boolean {
+    export function irButton(Button: CutbotProIRButtons): boolean {
         if (IR_Val == 0xff00)
             IR_Val = 0x0001
         return (IR_Val & 0x00ff) == Button

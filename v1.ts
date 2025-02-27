@@ -1079,25 +1079,25 @@ namespace cutebotProV1 {
             while (true) {
                 if (!IR_handling_flag){
                     IR_Val = irCode()
-                    if (IR_Val == 0xff00 || (IR_Val & 0x00ff) == IRButtons.Eight
-                        || (IR_Val & 0x00ff) == IRButtons.Nine
-                        || (IR_Val & 0x00ff) == IRButtons.Menu
-                        || (IR_Val & 0x00ff) == IRButtons.Up
-                        || (IR_Val & 0x00ff) == IRButtons.Left
-                        || (IR_Val & 0x00ff) == IRButtons.Right
-                        || (IR_Val & 0x00ff) == IRButtons.Down
-                        || (IR_Val & 0x00ff) == IRButtons.OK
-                        || (IR_Val & 0x00ff) == IRButtons.Plus
-                        || (IR_Val & 0x00ff) == IRButtons.Minus
-                        || (IR_Val & 0x00ff) == IRButtons.Back
-                        || (IR_Val & 0x00ff) == IRButtons.Zero
-                        || (IR_Val & 0x00ff) == IRButtons.One
-                        || (IR_Val & 0x00ff) == IRButtons.Two
-                        || (IR_Val & 0x00ff) == IRButtons.Three
-                        || (IR_Val & 0x00ff) == IRButtons.Four
-                        || (IR_Val & 0x00ff) == IRButtons.Five
-                        || (IR_Val & 0x00ff) == IRButtons.Six
-                        || (IR_Val & 0x00ff) == IRButtons.Seven
+                    if (IR_Val == 0xff00 || (IR_Val & 0x00ff) == CutbotProIRButtons.Eight
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Nine
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Menu
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Up
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Left
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Right
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Down
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.OK
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Plus
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Minus
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Back
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Zero
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.One
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Two
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Three
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Four
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Five
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Six
+                        || (IR_Val & 0x00ff) == CutbotProIRButtons.Seven
                     ) {
                         IR_handling_flag = true
                         if (IR_Val == 0xff00)
@@ -1113,7 +1113,7 @@ namespace cutebotProV1 {
     /**
      * get IR value
      */
-    export function irButton(Button: CutbotProIRButtons): boolean {
+    export function irButton(Button: CutbotProCutbotProIRButtons): boolean {
         if (IR_Val == 0xff00)
             IR_Val = 0x0001
         return (IR_Val & 0x00ff) == Button

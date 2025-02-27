@@ -215,7 +215,7 @@ enum SonarUnit {
     Inches
 }
 
-export enum CutbotProIRButtons {
+enum CutbotProIRButtons {
     //% block="power"
     Power = 1,
     //% block="menu"
